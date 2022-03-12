@@ -40,17 +40,19 @@ function Home() {
                     id="outlined-search"
                     label="Search Field"
                     type="search"
+                    color="warning"
                     onChange={(e) =>
                         setSearchQuery((current) => ({ ...current, query: e.target.value }))
                     }
                 />
                 <FormControl>
-                    <InputLabel id="demo-simple-select-label">Type</InputLabel>
+                    <InputLabel id="demo-simple-select-label" color="success" >Type</InputLabel>
                     <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
                         value={searchQuery.type}
                         label="Age"
+                        color="success" 
                         onChange={(e) =>
                             setSearchQuery((current) => ({ ...current, type: e.target.value }))
                         }
@@ -68,6 +70,9 @@ function Home() {
                 <Button variant="contained" onClick={search}>
                     Search
                 </Button>
+            </Grid>
+            <Grid>
+                <Button onClick={getSpotifyToken}>token</Button>
             </Grid>
             <Grid
                 container
